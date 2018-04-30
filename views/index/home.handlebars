@@ -1,19 +1,68 @@
 <div class="row">
-  {{#each goodFoods}}
-    <div class="col m3 foodContainer">
-      <div class="card green foodCard">
-        <div class="cardFront">
-          <div class="card-image">
+  <div class="col s12">
+    <div id="goodFoods" class="section scrollspy">
+      <h1>Good Foods</h1>
+      {{#each goodFoods}}
+        <div class="col m3 foodContainer">
+          <div class="card green foodCard">
+            <div class="cardFront">
+              <div class="card-image">
 
-          </div>
-          <div class="card-content">
-            <span class="card-title">{{name}}</span>
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{name}}</span>
+              </div>
+            </div>
+            <div class="card-content cardBack" style="display: none;">
+              <p>{{description}}</p>
+            </div>
           </div>
         </div>
-        <div class="card-content cardBack" style="display: none;">
-          <p>{{description}}</p>
-        </div>
-      </div>
+      {{/each}}
     </div>
-  {{/each}}
+  </div>
+  <div class="col s12">
+    <div id="sometimesFoods" class="section scrollspy">
+      <h1>Sometimes Foods</h1>
+      {{#each sometimesFoods}}
+        <div class="col m3 foodContainer">
+          <div class="card grey foodCard">
+            <div class="cardFront">
+              <div class="card-image">
+
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{name}}</span>
+              </div>
+            </div>
+            <div class="card-content cardBack" style="display: none;">
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="col s12">
+    <div id="badFoods" class="section scrollspy">
+      <h1>Bad Foods</h1>
+      {{#each badFoods}}
+        <div class="col m3 foodContainer">
+          <div class="card red foodCard">
+            <div class="cardFront">
+              <div class="card-image">
+
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{name}}</span>
+              </div>
+            </div>
+            <div class="card-content cardBack" style="display: none;">
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
 </div>

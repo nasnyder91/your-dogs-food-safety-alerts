@@ -18,4 +18,5 @@
   -webkit-animation-name: rotate180;
   animation-name: rotate180;
   animation-duration: var(--duration);
+  animation-iteration-count: infinite;
 }

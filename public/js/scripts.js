@@ -1,8 +1,15 @@
+// Materialize initializations
+const scrollSpy = document.querySelectorAll('.scrollspy');
+const scrollSpyInstance = M.ScrollSpy.init(scrollSpy, {});
+
 // Event Listeners
-document.querySelector('.foodCard').addEventListener('mouseenter', flipCard);
-document.querySelector('.foodCard').addEventListener('mouseleave', flipCard);
-
-
+const foodCards = document.querySelectorAll('.foodCard');
+foodCards.forEach(card => {
+  card.addEventListener('mouseenter', flipCard);
+  card.addEventListener('mouseleave', flipCard);
+})
+// document.querySelector('.foodCard').addEventListener('mouseenter', flipCard);
+// document.querySelector('.foodCard').addEventListener('mouseleave', flipCard);
 
 function flipCard(e){
   let card = e.target;
@@ -22,7 +29,6 @@ function flipCard(e){
     cardBack.style.display = (cardBack.style.display === 'block' ? 'none' : 'block');
   }, () => {
     if((!card.matches(':hover')) && (cardFront.style.display === 'none')){
-      console.log(123421);
       setTimeout(flipCard(e), 500);
     }
   });
