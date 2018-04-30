@@ -1,5 +1,27 @@
 @import "animations.css";
 
+body,html{
+    width: 100% !important;
+    height: 100% !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
 .foodCard{
-  height: 200px;
+  height: 175px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.foodCard img{
+  box-shadow: 3px 3px 5px black;
+}
+
+.table-of-contents{
+  position: fixed;
+  top: 10%;
 }

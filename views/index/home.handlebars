@@ -3,17 +3,13 @@
     <div id="goodFoods" class="section scrollspy">
       <h1>Good Foods</h1>
       {{#each goodFoods}}
-        <div class="col m3 foodContainer">
+        <div class="col m2 foodContainer">
           <div class="card green foodCard">
             <div class="cardFront">
-              <div class="card-image">
-
-              </div>
-              <div class="card-content">
-                <span class="card-title">{{name}}</span>
-              </div>
+              <img class="circle responsive-img" src="/img/goodfoods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
             </div>
-            <div class="card-content cardBack" style="display: none;">
+            <div class="cardBack" style="display: none;">
               <p>{{description}}</p>
             </div>
           </div>
@@ -25,17 +21,13 @@
     <div id="sometimesFoods" class="section scrollspy">
       <h1>Sometimes Foods</h1>
       {{#each sometimesFoods}}
-        <div class="col m3 foodContainer">
+        <div class="col m2 foodContainer">
           <div class="card grey foodCard">
             <div class="cardFront">
-              <div class="card-image">
-
-              </div>
-              <div class="card-content">
-                <span class="card-title">{{name}}</span>
-              </div>
+              <img class="circle responsive-img" src="/img/sometimesfoods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
             </div>
-            <div class="card-content cardBack" style="display: none;">
+            <div class="cardBack" style="display: none;">
               <p>{{description}}</p>
             </div>
           </div>
@@ -47,17 +39,13 @@
     <div id="badFoods" class="section scrollspy">
       <h1>Bad Foods</h1>
       {{#each badFoods}}
-        <div class="col m3 foodContainer">
+        <div class="col m2 foodContainer">
           <div class="card red foodCard">
             <div class="cardFront">
-              <div class="card-image">
-
-              </div>
-              <div class="card-content">
-                <span class="card-title">{{name}}</span>
-              </div>
+              <img class="circle responsive-img" src="/img/badfoods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
             </div>
-            <div class="card-content cardBack" style="display: none;">
+            <div class="cardBack" style="display: none;">
               <p>{{description}}</p>
             </div>
           </div>
