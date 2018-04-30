@@ -1,0 +1,20 @@
+{
+  "goodFoods": [
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur."
+    }
+  ],
+  "badFoods": [
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?"
+    }
+  ],
+  "sometimesFoods":[
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et."
+    }
+  ]
+}
