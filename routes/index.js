@@ -10,4 +10,26 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/assets/json/foodList.json', (req,res) => {
+  let foodListAll = foodList.goodFoods;
+  foodListAll = foodListAll.concat(foodList.badFoods);
+  foodListAll = foodListAll.concat(foodList.sometimesFoods);
+  let matchedFood = [];
+  if(req.query.search === ''){
+    res.send(matchedFood);
+  } else{
+    for(let i = 0; i < foodListAll.length; i++){
+      if(foodListAll[i].name.toLowerCase().includes(req.query.search.toLowerCase())){
+        matchedFood.push(foodListAll[i]);
+      }
+
+      if(matchedFood.length === 6){
+        break;
+      }
+    }
+
+    res.send(matchedFood);
+  }
+});
+
 module.exports = router;
