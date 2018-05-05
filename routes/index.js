@@ -10,6 +10,11 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/myfoodalerts', (req,res) => {
+  res.send('MY');
+});
+
+// Get list of food from file
 router.get('/assets/json/foodList.json', (req,res) => {
   let foodListAll = foodList.goodFoods;
   foodListAll = foodListAll.concat(foodList.badFoods);

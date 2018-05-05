@@ -23,5 +23,6 @@ body,html{
 
 .table-of-contents{
   position: fixed;
+  left: 0;
   top: 10%;
 }

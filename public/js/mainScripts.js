@@ -9,22 +9,19 @@ foodCards.forEach(card => {
   card.addEventListener('mouseleave', flipCard);
 });
 
-document.querySelector('#searchResults').addEventListener('mouseover', checkIfCard);
-document.querySelector('#searchResults').addEventListener('mouseout', checkIfCard);
+// Search for food on keyup
+if(document.querySelector('#searchFoods')){
+  document.querySelector('#searchFoods').addEventListener('keyup', showSearchResults);
+}
 
-document.querySelector('#searchFoods').addEventListener('keyup', showSearchResults);
-
-
-function checkIfCard(e){
-  if(e.target.classList.contains('card')){
-    console.log(123421);
-
-    flipCard(e);
-  }
+// Clear search bar
+if(document.querySelector('#clearSearch')){
+  document.querySelector('#clearSearch').addEventListener('click', clearSearchBar);
 }
 
 function flipCard(e){
   let card = e.target;
+  const flipDur = 400;
   if(card.classList.contains('rotate180')){
     return;
   }
@@ -36,12 +33,12 @@ function flipCard(e){
   const cardFront = card.querySelector('.cardFront');
   const cardBack = card.querySelector('.cardBack');
 
-  rotate180(card, 500, () => {
+  rotate180(card, flipDur, () => {
     cardFront.style.display = (cardFront.style.display === 'none' ? 'block' : 'none');
     cardBack.style.display = (cardBack.style.display === 'block' ? 'none' : 'block');
   }, () => {
     if((!card.matches(':hover')) && (cardFront.style.display === 'none')){
-      setTimeout(flipCard(e), 500);
+      setTimeout(flipCard(e), flipDur);
     }
   });
 }
@@ -99,7 +96,7 @@ function fillSearchResults(matchedFoods){
       const foodContainer = document.createElement('div');
       foodContainer.className = 'col m2 foodContainer';
       foodContainer.innerHTML = `
-        <div class="card ${color} foodCard">
+        <div class="card ${color} foodCard" onmouseenter="flipCard(event)" onmouseleave="flipCard(event)">
           <div class="cardFront">
             <img class="circle responsive-img" src="/img/${food.safety}foods/${food.name}.jpeg" alt="${food.name} image">
             <span class="card-title">${food.name}</span>
@@ -114,4 +111,9 @@ function fillSearchResults(matchedFoods){
   } else{
     searchResultsSection.innerHTML = '<p>There are no foods that match your search!</p>'
   }
+}
+
+function clearSearchBar(){
+  document.querySelector('#searchInput').value = '';
+  document.querySelector('#searchResults').innerHTML = '';
 }
