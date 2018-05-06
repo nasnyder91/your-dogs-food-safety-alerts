@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const foodList = require('../assets/json/foodList');
+const { ensureAuthenticated } = require('../helpers/auth');
 
 require('../models/FoodList');
 const userFoodLists = mongoose.model('foodlists');
@@ -14,21 +15,35 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/myfoodalerts', (req, res) => {
-  console.log(12341);
+router.get('/myfoodalerts', ensureAuthenticated, (req, res) => {
+  userFoodLists.findOne({user: req.user.id})
+    .then(foodList => {
+      res.render('index/myfoodalerts', {
+        foodList: foodList.savedFoods
+      });
+    });
 });
 
 router.post('/updatefoodlist', (req, res) => {
   let updatedList;
   let message = '';
+  const newFood = {
+    name: req.body.foodName,
+    description: req.body.foodDes,
+    safety: req.body.safety
+  };
   userFoodLists.findOne({user: req.body.userID})
     .then(userList => {
       updatedList = userList.savedFoods;
-      if(updatedList.includes(req.body.foodItem)){
-        updatedList.splice(updatedList.indexOf(req.body.foodItem), 1);
-        message = 'Food Item Removed';
-      } else{
-        updatedList.push(req.body.foodItem);
+
+      updatedList.forEach((food, index) => {
+        if(food.name === req.body.foodName){
+          updatedList.splice(index, 1);
+          message = 'Food Item Removed';
+        }
+      });
+      if(message === ''){
+        updatedList.push(newFood);
         message = 'Food Item Added';
       }
 
@@ -42,6 +57,7 @@ router.post('/updatefoodlist', (req, res) => {
           newFoodList.save()
             .then(() => {
               console.log(message);
+              res.send(message);
             });
         });
     })

@@ -26,7 +26,7 @@ mongoose.connect('mongodb://Nick:10536087@ds113358.mlab.com:13358/dogsafe_dev')
 
 //Handlebar helpers
 const {
-  updateUserList
+  cardColor
 } = require('./helpers/hbs');
 
 // Passport config
@@ -35,7 +35,7 @@ require('./config/passport')(passport);
 // Express Handlebars Middleware
 app.engine('handlebars', exphbs({
   helpers: {
-    updateUserList: updateUserList
+    cardColor: cardColor
   },
   defaultLayout: 'main'
 }));

@@ -19,6 +19,14 @@ if(document.querySelector('#clearSearch')){
   document.querySelector('#clearSearch').addEventListener('click', clearSearchBar);
 }
 
+// Delete food from saved foods
+if(document.querySelector('.deleteFood')){
+  const deleteFoodBtns = document.querySelectorAll('.deleteFood');
+  deleteFoodBtns.forEach(btn => {
+    btn.addEventListener('click', deleteFoodCard);
+  });
+}
+
 function flipCard(e){
   let card = e.target;
   const flipDur = 400;
@@ -118,11 +126,13 @@ function clearSearchBar(){
   document.querySelector('#searchResults').innerHTML = '';
 }
 
-function updateUserList(userID, foodItem){
+function updateUserList(userID, foodName, foodDes, safety){
   const url = '/updatefoodlist';
   const data = {
     userID,
-    foodItem
+    foodName,
+    foodDes,
+    safety
   };
 
   fetch(url, {
@@ -132,6 +142,9 @@ function updateUserList(userID, foodItem){
       'Content-Type': 'application/json'
     })
   })
-    .then(res => res.json())
     .catch(err => console.log(err));
+}
+
+function deleteFoodCard(e){
+  e.target.parentElement.parentElement.parentElement.parentElement.parentElement.removeChild(e.target.parentElement.parentElement.parentElement.parentElement);
 }

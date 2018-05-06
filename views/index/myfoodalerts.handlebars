@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col s12">
+    <div id="yourFoods">
+      <h1>Your Saved Food Alerts</h1>
+      {{#each foodList}}
+        <div class="col m2 foodContainer">
+          <div class="card {{cardColor safety}} foodCard">
+            <div class="cardFront">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
+            </div>
+            <div class="cardBack" style="display: none;">
+              {{#if ../user}}
+                <a class="btn-floating halfway-fab red"><i class="deleteFood material-icons" onclick="updateUserList('{{../user.id}}', '{{name}}', '{{description}}', '{{safety}}')">close</i></a>
+              {{/if}}
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
