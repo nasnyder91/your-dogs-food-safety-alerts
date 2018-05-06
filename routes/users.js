@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 // Load User Model
 require('../models/User');
 const User = mongoose.model('users');
+require('../models/FoodList');
+const UserFoodList = mongoose.model('foodlists');
 
 router.get('/login', (req,res) => {
   res.render('users/login');
@@ -60,7 +62,14 @@ router.post('/register', (req, res) => {
               newUser.save()
                 .then(user => {
                   console.log('New user registered');
-                  res.redirect('/users/login');
+                  const newUserList = new UserFoodList({
+                    savedFoods: [],
+                    user: user.id
+                  });
+                  newUserList.save()
+                    .then(() => {
+                      res.redirect('/users/login');
+                    });
                 })
                 .catch(err => {
                   console.log(err);

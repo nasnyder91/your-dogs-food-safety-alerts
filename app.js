@@ -14,6 +14,7 @@ const users = require('./routes/users');
 
 // Load models
 require('./models/User');
+require('./models/FoodList');
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -23,11 +24,19 @@ mongoose.connect('mongodb://Nick:10536087@ds113358.mlab.com:13358/dogsafe_dev')
   .then(() => console.log('Mongoose Connected...'))
   .catch(err => console.log(err));
 
+//Handlebar helpers
+const {
+  updateUserList
+} = require('./helpers/hbs');
+
 // Passport config
 require('./config/passport')(passport);
 
 // Express Handlebars Middleware
 app.engine('handlebars', exphbs({
+  helpers: {
+    updateUserList: updateUserList
+  },
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');

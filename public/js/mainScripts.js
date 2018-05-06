@@ -117,3 +117,21 @@ function clearSearchBar(){
   document.querySelector('#searchInput').value = '';
   document.querySelector('#searchResults').innerHTML = '';
 }
+
+function updateUserList(userID, foodItem){
+  const url = '/updatefoodlist';
+  const data = {
+    userID,
+    foodItem
+  };
+
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  })
+    .then(res => res.json())
+    .catch(err => console.log(err));
+}
