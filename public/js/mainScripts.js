@@ -105,10 +105,10 @@ function fillSearchResults(matchedFoods){
           color = 'grey';
       }
       const foodContainer = document.createElement('div');
-      foodContainer.className = 'col m2 foodContainer';
+      foodContainer.className = 'col m2 foodContainer hide-on-small-only hide-on-med-only';
       foodContainer.innerHTML = `
         <div class="card ${color} foodCard" onmouseenter="flipCard(event)" onmouseleave="flipCard(event)">
-          <div class="cardFront">
+          <div class="cardFront center">
             <img class="circle responsive-img" src="/img/${food.safety}foods/${food.name}.jpeg" alt="${food.name} image">
             <span class="card-title">${food.name}</span>
           </div>
@@ -118,6 +118,21 @@ function fillSearchResults(matchedFoods){
         </div>
       `;
       searchResultsSection.appendChild(foodContainer);
+
+      const foodContainerSmall = document.createElement('div');
+      foodContainerSmall.className = 'foodContainer foodContainerSmall hide-on-large-only';
+      foodContainerSmall.innerHTML = `
+        <div class="card ${color} foodCard" onmouseenter="flipCard(event)" onmouseleave="flipCard(event)">
+          <div class="cardFront center">
+            <img class="circle responsive-img" src="/img/${food.safety}foods/${food.name}.jpeg" alt="${food.name} image">
+            <span class="card-title">${food.name}</span>
+          </div>
+          <div class="cardBack" style="display: none;">
+            <p>${food.description}</p>
+          </div>
+        </div>
+      `;
+      searchResultsSection.appendChild(foodContainerSmall);
     });
   } else{
     searchResultsSection.innerHTML = '<p>There are no foods that match your search!</p>'

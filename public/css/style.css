@@ -32,8 +32,16 @@ body,html{
   color: #ffeb3b;
 }
 
+#searchResults{
+  max-width: 100%;
+}
+
 .foodListSection{
   max-width: 100%;
+}
+
+.foodContainerSmall{
+  display: inline-block;
 }
 
 .foodContainerSmall .foodCard{
@@ -41,4 +49,10 @@ body,html{
   max-width: 250px;
   height: 250px;
   white-space: normal;
+}
+
+.scrollspyTabs{
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
