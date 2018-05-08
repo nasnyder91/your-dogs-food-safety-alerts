@@ -2,6 +2,9 @@
 const scrollSpy = document.querySelectorAll('.scrollspy');
 const scrollSpyInstance = M.ScrollSpy.init(scrollSpy, {});
 
+const sideNav = document.querySelectorAll('.sidenav');
+const sideNavInstance = M.Sidenav.init(sideNav, {});
+
 // Event Listeners
 const foodCards = document.querySelectorAll('.foodCard');
 foodCards.forEach(card => {

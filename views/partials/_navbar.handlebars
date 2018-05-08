@@ -1,7 +1,7 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo right">Your Dog's Food Safety Alerts!</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    <a href="/" class="brand-logo right hide-on-med-and-down">Your Dog's Food Safety Alerts!</a>
+    <ul class="left hide-on-med-and-down">
       {{#if user}}
         <li><a href="/">All Food Alerts</a></li>
         <li><a href="/myfoodalerts">My Food Alerts</a></li>
@@ -11,5 +11,19 @@
         <li><a href="/users/register">Register</a></li>
       {{/if}}
     </ul>
+    <a href="#" data-target="sideNav" class="sidenav-trigger show-on-med-and-up right"><i class="material-icons">menu</i></a>
   </div>
 </nav>
+
+<ul id="sideNav" class="sidenav">
+  {{> _logo}}
+  <li><div class="divider"></div></li>
+  {{#if user}}
+    <li><a href="/">All Food Alerts</a></li>
+    <li><a href="/myfoodalerts">My Food Alerts</a></li>
+    <li><a href="/users/logout">Logout</a></li>
+  {{else}}
+    <li><a class="btn" href="/users/login">Login</a></li>
+    <li><a class="btn" href="/users/register">Register</a></li>
+  {{/if}}
+</ul>

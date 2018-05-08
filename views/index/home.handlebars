@@ -1,15 +1,30 @@
+{{> _logo}}
 {{> _search}}
 {{> _scrollspy}}
 
 <div class="row">
   <div class="col s12">
-    <div id="goodFoods" class="section scrollspy">
-      <h1>Good Foods</h1>
+    <h1>Good Foods</h1>
+    <div id="goodFoods" class="section scrollspy foodListSection">
       {{#each goodFoods}}
-        <div class="col m2 foodContainer">
+        <div class="col m2 foodContainer hide-on-small-only hide-on-med-only">
           <div class="card green foodCard">
-            <div class="cardFront">
-              <img class="circle responsive-img" src="/img/goodfoods/{{name}}.jpeg" alt="{{name}} image">
+            <div class="cardFront center">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
+            </div>
+            <div class="cardBack" style="display: none;">
+              {{#if ../user}}
+                <a class="btn-floating halfway-fab black"><i class="saveStar material-icons" onclick="updateUserList('{{../user.id}}', '{{name}}', '{{description}}', '{{safety}}')">star</i></a>
+              {{/if}}
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="foodContainer foodContainerSmall hide-on-large-only" style="display: inline-block;">
+          <div class="card green foodCard">
+            <div class="cardFront center">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
               <span class="card-title">{{name}}</span>
             </div>
             <div class="cardBack" style="display: none;">
@@ -24,13 +39,27 @@
     </div>
   </div>
   <div class="col s12">
-    <div id="sometimesFoods" class="section scrollspy">
-      <h1>Sometimes Foods</h1>
+    <h1>Sometimes Foods</h1>
+    <div id="sometimesFoods" class="section scrollspy foodListSection">
       {{#each sometimesFoods}}
-        <div class="col m2 foodContainer">
+        <div class="col m2 foodContainer hide-on-small-only hide-on-med-only">
           <div class="card grey foodCard">
-            <div class="cardFront">
-              <img class="circle responsive-img" src="/img/sometimesfoods/{{name}}.jpeg" alt="{{name}} image">
+            <div class="cardFront center">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
+            </div>
+            <div class="cardBack" style="display: none;">
+              {{#if ../user}}
+                <a class="btn-floating halfway-fab black"><i class="saveStar material-icons" onclick="updateUserList('{{../user.id}}', '{{name}}', '{{description}}', '{{safety}}')">star</i></a>
+              {{/if}}
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="foodContainer foodContainerSmall hide-on-large-only" style="display: inline-block;">
+          <div class="card grey foodCard">
+            <div class="cardFront center">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
               <span class="card-title">{{name}}</span>
             </div>
             <div class="cardBack" style="display: none;">
@@ -45,13 +74,27 @@
     </div>
   </div>
   <div class="col s12">
-    <div id="badFoods" class="section scrollspy">
-      <h1>Bad Foods</h1>
+    <h1>Bad Foods</h1>
+    <div id="badFoods" class="section scrollspy foodListSection">
       {{#each badFoods}}
-        <div class="col m2 foodContainer">
+        <div class="col m2 foodContainer hide-on-small-only hide-on-med-only">
           <div class="card red foodCard">
-            <div class="cardFront">
-              <img class="circle responsive-img" src="/img/badfoods/{{name}}.jpeg" alt="{{name}} image">
+            <div class="cardFront center">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
+              <span class="card-title">{{name}}</span>
+            </div>
+            <div class="cardBack" style="display: none;">
+              {{#if ../user}}
+                <a class="btn-floating halfway-fab black"><i class="saveStar material-icons" onclick="updateUserList('{{../user.id}}', '{{name}}', '{{description}}', '{{safety}}')">star</i></a>
+              {{/if}}
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="foodContainer foodContainerSmall hide-on-large-only" style="display: inline-block;">
+          <div class="card red foodCard">
+            <div class="cardFront center">
+              <img class="circle responsive-img" src="/img/{{safety}}foods/{{name}}.jpeg" alt="{{name}} image">
               <span class="card-title">{{name}}</span>
             </div>
             <div class="cardBack" style="display: none;">

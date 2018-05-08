@@ -4,6 +4,56 @@
       "name": "Apples",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
       "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
+    },
+    {
+      "name": "Apples",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur.",
+      "safety": "good"
     }
   ],
   "badFoods": [
@@ -11,9 +61,139 @@
       "name": "Chocolate",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
       "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae excepturi, quam blanditiis?",
+      "safety": "bad"
     }
   ],
   "sometimesFoods":[
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
+    {
+      "name": "Cheese",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
+      "safety": "sometimes"
+    },
     {
       "name": "Cheese",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro expedita sapiente animi, eaque cum et.",
